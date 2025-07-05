@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoGrow - Vasos Inteligentes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde: #4caf50;
+      --verde-escuro: #2e7d32;
+      --bege: #f9f7f2;
+      --cinza: #444;
+      --branco: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bege);
+      color: var(--cinza);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: var(--verde);
+      padding: 10px;
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: url("https://source.unsplash.com/featured/?green,plant") center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: var(--verde);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--verde-escuro);
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .features, .about, .contact {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s;
+    }
+
+    .features:hover, .about:hover, .contact:hover {
+      transform: translateY(-4px);
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: var(--verde-escuro);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1em;
+    }
+
+    form button {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EcoGrow</h1>
+  <p>Vasos Inteligentes e 100% Biodegradáveis</p>
+</header>
+
+<nav>
+  <a href="#funciona">Como Funciona</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#assinatura">Assinatura</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+  <h1>Cultive o futuro com inteligência</h1>
+  <p>Sua planta mais saudável. Seu mundo mais verde.</p>
+  <button class="btn">Ver produtos</button>
+</section>
+
+<section id="funciona" class="features">
+  <h2>Como Funciona</h2>
+  <ul>
+    <li>🌱 Biodegradável: o vaso se decompõe e vira adubo</li>
+    <li>📱 Inteligente: sensores enviam dados para seu celular</li>
+    <li>☀️ Sustentável: feito com materiais naturais</li>
+  </ul>
+</section>
+
+<section id="produtos" class="products">
+  <div class="product-card">
+    <img src="https://source.unsplash.com/280x180/?small,plant" alt="Vaso Pequeno" />
+    <h3>Vaso Pequeno</h3>
+    <p>Ideal para suculentas</p>
+    <p><strong>R$ 39,90</strong></p>
+    <button class="btn">Comprar</button>
+  </div>
+  <div class="product-card">
+    <img src="https://source.unsplash.com/280x180/?medium,plant" alt="Vaso Médio" />
+    <h3>Vaso Médio</h3>
+    <p>Perfeito para ervas e temperos</p>
+    <p><strong>R$ 59,90</strong></p>
+    <button class="btn">Comprar</button>
+  </div>
+  <div class="product-card">
+    <img src="https://source.unsplash.com/280x180/?kit,plants" alt="Kit 3 Vasos" />
+    <h3>Kit 3 Vasos + Mudas</h3>
+    <p>Comece agora sua mini-horta</p>
+    <p><strong>R$ 129,90</strong></p>
+    <button class="btn">Comprar</button>
+  </div>
+</section>
+
+<section id="assinatura" class="about">
+  <h2>Assinatura Premium</h2>
+  <p>Receba dicas, suporte e conteúdos exclusivos de jardinagem sustentável direto no app.</p>
+  <button class="btn">Assinar Agora</button>
+</section>
+
+<section id="contato" class="contact">
+  <h2>Fale com a gente</h2>
+  <form action="https://formspree.io/f/seu_id_aqui" method="POST">
+    <input type="text" name="nome" placeholder="Seu nome" required />
+    <input type="email" name="email" placeholder="Seu e-mail" required />
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>EcoGrow © 2025 – Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
